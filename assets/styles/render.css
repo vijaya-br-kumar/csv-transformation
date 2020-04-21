@@ -1,0 +1,27 @@
+#heading{
+    color: #767676;
+    text-align: center;
+    padding: 25px;
+    font-size: 28px;
+}
+.col-4{
+    width: 33%;
+    margin: auto;
+}
+.col-4 button{
+    width: 60px;
+    margin: auto;
+    display: block;
+}
+.export{
+    float: right;
+    margin: 0 20px 20px 0;
+    display: flex;
+}
+.export form{
+    margin-right: 10px;
+}
+.table-style{
+    margin: 20px;
+}
+

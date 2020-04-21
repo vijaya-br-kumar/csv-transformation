@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a057f7bf-0352-43fb-b39f-bd93230de7fb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/spipu/html2pdf" />
+      <path value="$PROJECT_DIR$/vendor/tecnickcom/tcpdf" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1anFgrVqPtOlVvIXv1V8VTZEiEs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/styles" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\csv-transformation\assets\styles" />
+      <recent name="C:\xampp\htdocs\csv-transformation\templates" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a057f7bf-0352-43fb-b39f-bd93230de7fb" name="Default Changelist" comment="" />
+      <created>1587363564475</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587363564475</updated>
+      <workItem from="1587363570132" duration="383000" />
+      <workItem from="1587364859021" duration="2634000" />
+      <workItem from="1587367651617" duration="998000" />
+      <workItem from="1587394480722" duration="10271000" />
+      <workItem from="1587447860388" duration="24544000" />
+      <workItem from="1587478705565" duration="2876000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="263" y="22" key="#CLI_Interpreters" timestamp="1587403068859">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="263" y="22" key="#CLI_Interpreters/0.0.1366.738@0.0.1366.738" timestamp="1587403068859" />
+    <state x="463" y="109" key="FileChooserDialogImpl" timestamp="1587478809526">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="109" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1587478809526" />
+    <state x="263" y="110" key="IDE.errors.dialog" timestamp="1587367501513">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="263" y="110" key="IDE.errors.dialog/0.0.1366.738@0.0.1366.738" timestamp="1587367501513" />
+    <state x="518" y="291" key="NewPhpFileDialog" timestamp="1587474348438">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="518" y="291" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1587474348438" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1587478812534">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1587478812534" />
+    <state x="339" y="159" key="run.anything.popup" timestamp="1587476330874">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="159" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1587476330874" />
+  </component>
+</project>

@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("styles/process.css") }}">
+{% endblock %}
+{% block body %}
+    <div class="col-4">
+        <a href="{{ site_path("index.php", false) }}"><button>Home</button></a>
+        <h1 id="heading">Choose Rows and Columns</h1>
+    </div>
+    <div class="col-4 form-border">
+        <form id="form-process" method="post" action="{{ site_path("render.php") }}" enctype="multipart/form-data">
+            <div class="checkbox-group">
+                <p>Columns</p>
+                <ul>
+                    {% for key,value in columns %}
+                        <li>
+                            <label for={{"column-"~key }}>
+                                <input type="checkbox" name={{ "column-"~key }} id={{ "column-"~key }}> {{ value }}
+                            </label>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <p>Rows</p>
+                <div>
+                    <label for="rowFrom">
+                        <strong>From:</strong> <input type="number" name="rowFrom" id="rowFrom" min="1" required>
+                    </label>
+                    <label for="rowTo">
+                        <strong>To:</strong> <input type="number" name="rowTo" id="rowTo" min="1" required>
+                    </label>
+                </div>
+            </div>
+            <input type="hidden" name="filename" value="{{ filename }}">
+            <input type="submit" class="input-submit">
+        </form>
+    </div>
+    {% if (messages | length) > 0 %}
+        {% for key, value in messages %}
+            {% if key == 'error' %}
+                <div class="col-4">
+                    <p class="error-message">{{ value }}</p>
+                </div>
+            {% elseif key == 'success' %}
+                <div class="col-4">
+                    <p class="success-message">{{ value }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $('#form-process').on('submit', function(){
+            if($('div.checkbox-group :checkbox:checked').length <= 0)
+            {
+                alert("Please select at least one column");
+                return false;
+            }
+            $("<input />").attr("type", "hidden")
+                .attr("name", "columns")
+                .attr("value", getColumns())
+                .appendTo("#form-process");
+            return true;
+        })
+
+        function getColumns()
+        {
+            let columns = [];
+            $('div.checkbox-group :checkbox:checked').each(function(){
+                columns.push(this.name);
+            })
+            return columns;
+        }
+    </script>
+{% endblock %}

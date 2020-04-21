@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("styles/render.css") }}">
+{% endblock %}
+{% block body %}
+    <div class="col-4">
+        <a href="{{ site_path("index.php", false) }}"><button>Home</button></a>
+        <h1 id="heading">Selected Rows and Columns</h1>
+    </div>
+    <div class="export">
+        <form method="post" action="{{ site_path("export.php") }}" enctype="multipart/form-data">
+            <input type="hidden" name="parameters" value="{{ formData }}">
+            <input type="hidden" name="type" value="CSV">
+            <button type="submit" formtarget="_blank">Export CSV</button>
+        </form>
+        <form method="post" action="{{ site_path("export.php") }}" enctype="multipart/form-data">
+            <input type="hidden" name="parameters" value="{{ formData }}">
+            <input type="hidden" name="type" value="XLS">
+            <button type="submit" formtarget="_blank">Export XLS</button>
+        </form>
+        <form method="post" action="{{ site_path("export.php") }}" enctype="multipart/form-data">
+            <input type="hidden" name="parameters" value="{{ formData }}">
+            <input type="hidden" name="type" value="PDF">
+            <button type="submit" formtarget="_blank">Export PDF</button>
+        </form>
+    </div>
+    <div class="table-style">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    {% for key, value in header %}
+                        <th scope="col">{{ value }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in row %}
+                    <tr>
+                        {% for value in data %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

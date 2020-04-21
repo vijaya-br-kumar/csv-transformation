@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("styles/index.css") }}">
+{% endblock %}
+{% block body %}
+    <div class="col-4">
+        <h1 id="heading">CSV Transformation</h1>
+    </div>
+    <div class="col-4 form-border">
+        <form method="post" action="{{ site_path("process.php") }}" enctype="multipart/form-data">
+                <input type="file" class="input-file" accept=".csv" required name="upload-file">
+                <input type="submit" class="input-submit">
+        </form>
+    </div>
+    {% if (messages | length) > 0 %}
+        {% for key, value in messages %}
+            {% if key == 'error' %}
+                <div class="col-4">
+                    <p class="error-message">{{ value }}</p>
+                </div>
+            {% elseif key == 'success' %}
+                <div class="col-4">
+                    <p class="success-message">{{ value }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

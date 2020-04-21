@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV-Transformation</title>
+</head>
+<body>
+    <div class="col-4">
+        <h1 id="heading" style="color: #767676;text-align: center;padding: 25px;font-size: 28px;">Selected Rows and Columns</h1>
+    </div>
+    <div>
+        <table style="border-collapse: collapse;width: 100%;border: 1px solid black;height: 30px;">
+            <tr>
+                {% for key, value in header %}
+                    <th style="border: 1px solid black;height: 30px;">{{ value }}</th>
+                {% endfor %}
+            </tr>
+            {% for data in row %}
+                <tr>
+                    {% for value in data %}
+                        <td style="border: 1px solid black;height: 30px;">{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
